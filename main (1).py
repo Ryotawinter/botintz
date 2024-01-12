@@ -4,7 +4,7 @@ from discord.ext import commands, tasks
 from discord import app_commands
 import asyncio
 import os
-#token = os.getenv("TOKEN")
+token = os.getenv("TOKEN")
 intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
@@ -95,7 +95,7 @@ async def clear(ctx):
     except discord.HTTPException:
         await ctx.send("Falha ao apagar as mensagens.")
 
-bot.run('MTE5NDQwNDMyNzkxODQyMDA3OQ.GZLdbk.nzdrslI_PGXlAyqzEVD2QaJCmMTqqKwyIV0_Q4')
+bot.run(token)
 
 
 
